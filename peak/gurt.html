@@ -14,6 +14,6 @@ window.speechSynthesis.speak(spe);
 await sleep(500)
 log = log + bub[c];
 document.getElementById("gurt").innerHTML = log;
-document.getElementById("breh").innerHTML = 203-c;
+document.getElementById("breh").innerHTML = "Words Left: "+203-c;
 function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
 }}</script>
