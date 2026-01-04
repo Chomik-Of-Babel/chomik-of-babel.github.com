@@ -1,0 +1,17 @@
+
+<button onclick="talk()">Start</button>
+<h3 id="gurt">Log: </h3>
+<script>
+var log="Log: ";
+var bub=["Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub! ", "Blub? ", "Blub. ", "Blub? ", "Blub. ", "Blub. ", "Blub. ", "Blub? ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub? ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub? ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub? ", "Blub. ", "Blub? ", "Blub. ", "Blub? ", "Blub. ", "Blub? ", "Blub. ", "Blub! ", "Blub! ", "Blub? ", "Blub! ", "Blub. ", "Blub? ", "Blub. ", "Blub? ", "Blub. ", "Blub? ", "Blub. ", "Blub? ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub! ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub! ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub! ", "Blub. ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub. ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub! ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub. ", "Blub! ", "Blub."];
+async function talk(){for(var c=0;c<bub.length;c++){var spe=new SpeechSynthesisUtterance();
+spe.text = bub[c];
+spe.volume = 1;
+spe.rate = 1;
+spe.pitch = 1;
+window.speechSynthesis.speak(spe);
+await sleep(500)
+log = log + bub[c];
+document.getElementById("gurt").innerHTML = log;
+function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+}}</script>
